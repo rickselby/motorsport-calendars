@@ -1,0 +1,24 @@
+- name: Saudi Arabian Grand Prix
+  id: 2022-02
+  timezone: Asia/Riyadh
+  sessions:
+    - name: Practice 1
+      id: practice-1
+      start: 20220325T170000
+      end: 20220325T180000
+    - name: Practice 2
+      id: practice-2
+      start: 20220325T200000
+      end: 20220325T210000
+    - name: Practice 3
+      id: practice-3
+      start: 20220326T170000
+      end: 20220326T180000
+    - name: Qualifying
+      id: qualifying
+      start: 20220326T200000
+      end: 20220326T210000
+    - name: Race
+      id: race
+      start: 20220327T200000
+      end: 20220327T220000

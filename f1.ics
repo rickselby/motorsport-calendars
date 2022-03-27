@@ -1,0 +1,19 @@
+---
+layout: null
+---
+BEGIN:VCALENDAR
+PRODID:https://rickselby.github.io/motorsport-calendars/
+VERSION:2.0
+{% for event in site.data.f1 %}
+{% for session in event.sessions %}
+BEGIN:VEVENT
+UID:f1-{{ event.id }}-{{ session.id }}@example.com
+DTSTAMP:{{ site.time | date_to_xmlschema }}
+DTSTART;TZID={{ event.timezone }}:{{ session.start }}
+DTEND;TZID={{ event.timezone }}:{{ session.end }}
+SUMMARY:{{ event.name }} - {{ session.name }}
+DESCRIPTION:{{ event.name }} - {{ session.name }}
+END:VEVENT
+{% endfor %}
+{% endfor %}
+END:VCALENDAR
